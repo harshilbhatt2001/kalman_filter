@@ -61,7 +61,7 @@ for step in range(NUMSTEPS):
     if step != 0 and step % MEAS_EVERY_STEPS == 0:
         kf.update(meas_value_x = real_x + np.random.randn() * np.sqrt(meas_variance),
                   meas_value_y = real_y + np.random.randn() * np.sqrt(meas_variance),
-                  meas_value_z = real_z + np.random.randn() * np.sqrt(meas_variance), 
+                  meas_value_z = real_z + np.random.randn() * np.sqrt(meas_variance),
                   meas_variance = meas_variance)
 
     real_xs.append(real_x)
@@ -87,4 +87,3 @@ plt.plot([mu[3] + 2*np.sqrt(cov[3, 3]) for mu, cov in zip(mus, covs)], 'r--')
 
 plt.show()
 plt.ginput(1)
-

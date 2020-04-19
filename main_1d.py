@@ -43,7 +43,7 @@ for step in range(NUMSTEPS):
 
     kf.predict(dt=DT)
     if step != 0 and step % MEAS_EVERY_STEPS == 0:
-        kf.update(meas_value = real_x + np.random.randn() * np.sqrt(meas_variance), 
+        kf.update(meas_value = real_x + np.random.randn() * np.sqrt(meas_variance),
                   meas_variance = meas_variance)
 
     real_xs.append(real_x)
@@ -67,4 +67,3 @@ plt.plot([mu[1] + 2*np.sqrt(cov[1, 1]) for mu, cov in zip(mus, covs)], 'r--')
 
 plt.show()
 plt.ginput(1)
-
