@@ -1,1 +1,3 @@
-{}
+{
+  "test_kf.py::TestKF::test_after_calling_predict_mean_and_covariance_are_of_right_shape": true
+}
